@@ -31,10 +31,10 @@ ul {
     }
 }
 
-.header img {
+/*.header img {
   height: 150px;
   width: 200px;
-}
+}*/
 
 .block div {
   border: 1px solid black;
@@ -122,4 +122,25 @@ p {
 .web a {
     font-weight: bold;
     color: gold;
+}
+
+.escudo {
+    border: 5px;
+    border-color: red;
+    border-style: solid;
+    height: 150px;
+    width: 200px;
+}
+
+.escudoCambiado {
+    border: 10px;
+    border-color: blue;
+    border-style: solid;
+    height: 250px;
+    width: 300px;
+}
+
+.textoCambiado {
+    color: gold;
+    font-size: 20px;
 }

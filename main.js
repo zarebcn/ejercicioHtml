@@ -34,7 +34,7 @@ greet("Javi");
 let escudo = document.querySelector(".header img");
 // cambios en el estilo CSS:
 // escudo.style.display = "none"; // esto esconde el elemento
-escudo.style.border = "5px solid red";
+//escudo.style.border = "5px solid red";
 
 // Esto hace que cuando se haga click en el escudo, se llame a la funcion escudoClickado
 //escudo.onclick = escudoClickado;
@@ -92,16 +92,12 @@ caca.onclick = cacaClickada;
 
 function escudoRatonOn() {
     console.log("raton encima del escudo");
-    escudo.style.border = "10px solid blue";
-    escudo.style.height = "250px";
-    escudo.style.width = "300px";
+    escudo.classList.add("escudoCambiado");
 }
 
 function escudoRatonOut() {
     console.log("raton fuera del escudo");
-    escudo.style.border = "5px solid red";
-    escudo.style.height = "150px";
-    escudo.style.width = "200px";
+    escudo.classList.toggle("escudoCambiado");
 }
 
 function lalaClickado() {
@@ -125,30 +121,30 @@ function linksRatonOut() {
 }
 
 function pacoRatonOn() {
-    $(paco).text("ALCANCER TUERCEBOTAS");
-    paco.style.color = "gold";
-    paco.style.fontSize = "20px";
+    paco.textContent = "ALCANCER TUERCEBOTAS";
+    //lo mismo es JQuery  $(paco).text("ALCANCER TUERCEBOTAS");
+    paco.classList.add("textoCambiado");
 }
 
 function pacoRatonOut() {
-    $(paco).text("17- Paco Alcacer");
-    paco.style.color = "black";
-    paco.style.fontSize = "16px";
+    paco.textContent = "17- Paco Alcacer";
+    //$(paco).text("17- Paco Alcacer");
+    paco.classList.toggle("textoCambiado");
 }
 
 function andreRatonOn() {
-    $(andre).text("Clicka para verme !!!!");
-    andre.style.color = "gold";
-    andre.style.fontSize = "20px";
+    andre.textContent = "Clicka para verme !!!!";
+    //$(andre).text("Clicka para verme !!!!");
+    andre.classList.add("textoCambiado");
     //andre.style.display = "none";
     //caca.style.display = "block";
 
 }
 
 function andreRatonOut() {
-    $(andre).text("21- André Gomes");
-    andre.style.color = "black";
-    andre.style.fontSize = "16px";
+    andre.textContent = "21- André Gomes";
+    //$(andre).text("21- André Gomes");
+    andre.classList.toggle("textoCambiado");
     //caca.style.display = "none";
     //andre.style.display = "initial";
 }
